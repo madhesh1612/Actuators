@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World of Actuators: An Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00A6A6, #F28F3B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-[#2D2D2A]">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black gradient-text mb-4">The World of Actuators</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-600">The hidden forces that make things move automatically</p>
+        </header>
+
+        <section class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center text-center">
+                    <h3 class="text-lg font-semibold text-gray-500 mb-2">Key Parts of Automation</h3>
+                    <p class="text-6xl font-extrabold text-[#E84855]">90%</p>
+                    <p class="mt-2 text-gray-600">Of all modern automated systems use some kind of actuator to work, from robots to airplanes.</p>
+                </div>
+                <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold mb-4 text-center">Different Ways Actuators Get Power</h2>
+                    <p class="text-center text-gray-600 mb-4">Actuators are grouped by how they get their energy. Hydraulic systems are very strong, while electric actuators are very exact. Air-powered (pneumatic) systems are fast and simple.</p>
+                    <div class="chart-container">
+                        <canvas id="powerSourceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-16 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-2">Electric Actuators: Flexible and Precise</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Electric actuators are the most common and improving type. They are best for jobs needing exact control and clean conditions. Many types exist, each made for specific tasks.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                     <div class="chart-container h-80 md:h-96">
+                        <canvas id="electricActuatorMarketShare"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Main Electric Types:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="text-2xl text-[#00A6A6] mr-4">⚙️</span>
+                            <div>
+                                <h4 class="font-semibold">Motors (DC/AC/Stepper)</h4>
+                                <p class="text-gray-600">These are the main workers for steady turning or straight-line movement. You find them in factory lines and robot arms.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl text-[#F28F3B] mr-4">🧲</span>
+                            <div>
+                                <h4 class="font-semibold">Solenoids</h4>
+                                <p class="text-gray-600">Give simple, quick, on-off straight-line motion. Great for locks, valves, and simple triggers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl text-[#E84855] mr-4">🔬</span>
+                            <div>
+                                <h4 class="font-semibold">Piezoelectric Actuators</h4>
+                                <p class="text-gray-600">Make very tiny and exact movements by changing electric energy into physical strain. Used in science tools.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Spotlight: How Magnetic Actuators Work</h2>
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-bold text-center mb-4">Magnetism's Power: The Lorentz Force in Action</h3>
+                <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">Magnetic actuators work using a basic rule: the Lorentz Force. An electric current creates a magnetic field, which then pushes or pulls another magnet to make things move without touching.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <p class="text-4xl">⚡</p>
+                        <p class="font-semibold">Electric Flow</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#00A6A6] transform md:-translate-y-4">→</div>
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <p class="text-4xl">🧲</p>
+                        <p class="font-semibold">Magnetic Field</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#F28F3B] transform md:-translate-y-4">→</div>
+                    <div class="text-center p-4 bg-red-50 rounded-lg">
+                        <p class="text-4xl">💪</p>
+                        <p class="font-semibold">Push / Twist</p>
+                    </div>
+                    <div class="text-2xl font-bold text-[#E84855] transform md:-translate-y-4">→</div>
+                    <div class="text-center p-4 bg-purple-50 rounded-lg">
+                        <p class="text-4xl">⚙️</p>
+                        <p class="font-semibold">Physical Motion</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-8">
+                <h3 class="text-2xl font-bold text-center mb-4">Different Kinds of Magnetic Actuators</h3>
+                <p class="text-center text-gray-600 mb-6 max-w-3xl mx-auto">All magnetic actuators use electricity to create magnetism, but their designs and uses change based on the type of movement and how exact it needs to be.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-4xl mb-2 text-[#00A6A6]">🧲</span>
+                        <h4 class="font-semibold text-lg mb-1">Solenoids</h4>
+                        <p class="text-sm text-gray-600">Simple, strong straight-line motion for on/off jobs.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-4xl mb-2 text-[#F28F3B]">🔊</span>
+                        <h4 class="font-semibold text-lg mb-1">Voice Coil Actuators</h4>
+                        <p class="text-sm text-gray-600">Very exact, fast straight-line motion for careful control.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-4xl mb-2 text-[#E84855]">⚙️</span>
+                        <h4 class="font-semibold text-lg mb-1">Magnetic Clutches</h4>
+                        <p class="text-sm text-gray-600">Connect or disconnect power in machines using magnetism.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                        <span class="text-4xl mb-2 text-[#714955]">🌐</span>
+                        <h4 class="font-semibold text-lg mb-1">Magnetic Bearings</h4>
+                        <p class="text-sm text-gray-600">Make things float, removing rubbing and wear.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-center">Solenoid vs. Voice Coil: Which is Best?</h3>
+                    <p class="text-center text-gray-600 mb-4">Solenoids are built for simple, strong actions, while Voice Coil Actuators (VCAs) are great for fast, very exact control.</p>
+                     <div class="chart-container">
+                        <canvas id="magneticActuatorComparison"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                     <h3 class="text-xl font-bold mb-4 text-center">Good Points and Bad Points</h3>
+                     <p class="text-center text-gray-600 mb-6">Magnetic actuators have big benefits, but also some limits you should know.</p>
+                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#00A6A6] mb-2">Good Points</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start"><span class="text-xl mr-2">✅</span> No Touching Parts</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">✅</span> Very Exact</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">✅</span> Quick to Respond</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">✅</span> Clean to Use</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">✅</span> Can Be Small or Big</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-lg text-[#E84855] mb-2">Bad Points</h4>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start"><span class="text-xl mr-2">❌</span> Can Get Hot</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">❌</span> Uses More Power (if always on)</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">❌</span> Limited Movement (for some)</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">❌</span> Can Cause Electric Buzz</li>
+                                <li class="flex items-start"><span class="text-xl mr-2">❌</span> Can Be More Costly</li>
+                            </ul>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-center mb-2">Where Magnetic Actuators Are Used</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Because they are so flexible, exact, and reliable, magnetic actuators are key in many important industries.</p>
+                <div class="chart-container h-96 md:h-[450px] max-w-4xl">
+                    <canvas id="applicationChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16 bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold text-center mb-2">What's Next for Magnetic Actuators</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Magnetic actuators are always getting better. People want them to be more efficient, smaller, and work smarter with other systems.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-4 rounded-lg bg-blue-50">
+                    <h3 class="font-semibold text-xl text-[#00A6A6] mb-2">New Ideas Coming</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🔬</span> **Getting Smaller:** Making tiny actuators for small devices and medical uses.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">💡</span> **Saving Energy:** Working to use less power and create less heat.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🤖</span> **Smarter Systems:** Adding sensors and AI for better control and predicting problems.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🚀</span> **New Materials:** Looking for new magnetic materials to make them work even better.</li>
+                    </ul>
+                </div>
+                <div class="p-4 rounded-lg bg-orange-50">
+                    <h3 class="font-semibold text-xl text-[#F28F3B] mb-2">Future Uses</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🚗</span> **Self-Driving Cars:** For very exact steering, braking, and suspension.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🩺</span> **Advanced Robots:** For soft robots, touch-feedback systems, and tiny tools.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">⚡</span> **Green Energy:** Improving how wind turbines and solar panels work.</li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🏭</span> **Smart Factories (Industry 4.0):** For fast sorting, exact assembly, and automatic quality checks.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-8 border-t">
+            <p class="text-gray-500">&copy; 2025 Actuator Insights. Infographic made for learning.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const energeticPlayful = {
+            blue: '#00A6A6',
+            orange: '#F28F3B',
+            red: '#E84855',
+            purple: '#714955',
+            dark: '#2D2D2A',
+            lightGray: '#F8F9FA'
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const wrapLabel = (label, maxWidth = 16) => {
+            if (label.length <= maxWidth) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: energeticPlayful.dark,
+                        font: {
+                            family: "'Inter', sans-serif"
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    ticks: { color: energeticPlayful.dark },
+                    grid: { color: '#e0e0e0' }
+                },
+                x: {
+                    ticks: { color: energeticPlayful.dark },
+                    grid: { display: false }
+                }
+            }
+        };
+
+        const powerSourceCtx = document.getElementById('powerSourceChart').getContext('2d');
+        new Chart(powerSourceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Hydraulic', 'Pneumatic', 'Electric'],
+                datasets: [{
+                    label: 'Relative Power Density',
+                    data: [90, 65, 50],
+                    backgroundColor: [energeticPlayful.blue, energeticPlayful.orange, energeticPlayful.red],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Relative Power (Higher is Stronger)'
+                        }
+                    }
+                }
+            }
+        });
+
+        const electricMarketShareCtx = document.getElementById('electricActuatorMarketShare').getContext('2d');
+        new Chart(electricMarketShareCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['DC/AC/Stepper Motors', 'Solenoids', 'Piezoelectric & Other', 'Servo Motors'],
+                datasets: [{
+                    label: 'Market Share',
+                    data: [45, 25, 10, 20],
+                    backgroundColor: [energeticPlayful.blue, energeticPlayful.orange, energeticPlayful.purple, energeticPlayful.red],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: { display: false },
+                    x: { display: false }
+                }
+            }
+        });
+
+        const magneticComparisonCtx = document.getElementById('magneticActuatorComparison').getContext('2d');
+        new Chart(magneticComparisonCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Exactness', 'Speed', 'Strength', 'Cost', 'Difficulty'],
+                datasets: [{
+                    label: 'Voice Coil Actuator',
+                    data: [9, 8, 4, 3, 5],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 166, 166, 0.2)',
+                    borderColor: energeticPlayful.blue,
+                    pointBackgroundColor: energeticPlayful.blue,
+                }, {
+                    label: 'Solenoid',
+                    data: [2, 7, 8, 9, 2],
+                    fill: true,
+                    backgroundColor: 'rgba(242, 143, 59, 0.2)',
+                    borderColor: energeticPlayful.orange,
+                    pointBackgroundColor: energeticPlayful.orange,
+                }]
+            },
+            options: {
+                 ...defaultChartOptions,
+                 scales: {
+                    r: {
+                        angleLines: { color: '#e0e0e0' },
+                        grid: { color: '#e0e0e0' },
+                        pointLabels: {
+                            font: { size: 12, weight: 'bold' },
+                            color: energeticPlayful.dark
+                        },
+                        ticks: {
+                            backdropColor: energeticPlayful.lightGray,
+                            color: energeticPlayful.dark
+                        }
+                    }
+                 }
+            }
+        });
+
+        const applicationCtx = document.getElementById('applicationChart').getContext('2d');
+        const applicationLabels = [
+            'Factory Automation', 
+            'Home Electronics', 
+            'Car Systems', 
+            'Medical Tools', 
+            'Air & Space Defense'
+        ].map(label => wrapLabel(label));
+        
+        const applicationData = [
+            { label: 'Factory Automation', value: 95 },
+            { label: 'Home Electronics', value: 85 },
+            { label: 'Car Systems', value: 75 },
+            { label: 'Medical Tools', value: 60 },
+            { label: 'Air & Space Defense', value: 50 }
+        ];
+
+        applicationData.sort((a, b) => b.value - a.value);
+        
+        new Chart(applicationCtx, {
+            type: 'bar',
+            data: {
+                labels: applicationData.map(d => wrapLabel(d.label)),
+                datasets: [{
+                    label: 'How Much They Are Used',
+                    data: applicationData.map(d => d.value),
+                    backgroundColor: [
+                        energeticPlayful.blue,
+                        energeticPlayful.orange,
+                        energeticPlayful.red,
+                        energeticPlayful.purple,
+                        '#007991'
+                    ],
+                    barThickness: 30,
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Relative Use Index' }
+                    },
+                     x: {
+                        ticks: {
+                            font: {
+                                size: 10
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
